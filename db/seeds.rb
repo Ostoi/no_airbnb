@@ -11,17 +11,17 @@ require 'faker'
 puts "Cleaning database"
 Spaceflight.destroy_all
 
-User.destroy_all
-user = User.create(email: "some_email@some.com", password: "123456")
+user = User.create(email: Faker::Internet.email, password: "123456")
 
 Spaceflight.create(name: "Space X", duration: 80, overview: "Nice view of the Galaxy", user_id: user.id)
 puts "finish"
 
-5.times do
+10.times do
+  user = User.create(email: "#{Faker::Internet.email}", password: "123456")
   spaceflight = Spaceflight.create!(
     name: Faker::Space.nasa_space_craft,
     user_id: user.id,
-    duration: Faker::Space.nasa_space_craft,
+    duration: rand(0..100),
     overview: Faker::Space.nasa_space_craft,
     cabin_class: Faker::Space.nasa_space_craft,
     departure_location: Faker::Space.nasa_space_craft,
