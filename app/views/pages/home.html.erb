@@ -1,2 +1,13 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+    <% @spaceflights.each do |f| %>
+    <ul>
+       <li><%=   f.name %></li>
+       <li><%=   f.duration %></li>
+       <li><%=   f.overview %></li>
+    </ul>
+    <% end %>
+
+
+<%# <%= link_to 'Patient Record', patient_path(@patient) %> %>

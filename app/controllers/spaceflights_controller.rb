@@ -8,6 +8,9 @@ class SpaceflightsController < ApplicationController
   end
 
   def create
-
+  end
+  
+  def show
+    @spaceflight = Spaceflight.find(params[:id])
   end
 end
