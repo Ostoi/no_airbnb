@@ -9,7 +9,7 @@ class SpaceflightsController < ApplicationController
 
   def create
   end
-  
+
   def show
     @spaceflight = Spaceflight.find(params[:id])
   end
