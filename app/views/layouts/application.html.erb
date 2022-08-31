@@ -9,15 +9,14 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
-
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <header class="banner" id="header">
       <nav class="navbar navbar-toggle-md-inverse nav-home">
         <div class="container container-nav">
         </div>
       </nav>
     </header>
-    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon", style="background-image: url('https://cdn.wallpapersafari.com/78/61/UpyKCV.jpg')">
       <div class="container-fluid">
         <%= link_to "#", class: "navbar-brand" do %>
         <%= image_tag "https://img.freepik.com/vektoren-premium/rakete-symbol-rocket-and-planets-raum-ikonen-weiss-lokalisiert_138676-551.jpg?w=2000" %>
@@ -52,6 +51,9 @@
     </div>
   </div>
 </div>
-    <%= yield %>
+      <article class="flex-grow-1">
+        <%= yield %>
+      </article>
+    <footer style="background-image: url(https://spaceflight.com/wp-content/uploads/2017/06/bg-footer-1.jpg); background-size: cover; background-repeat: no-repeat; background-position: 50% 70%;">Contact us</footer>
   </body>
 </html>
