@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <h1>Welcome to No_Airbnb</h1>
+
+<% @spaceflights.each do |spaceflight| %>
+    <div class="card">
+        <%= spaceflight.name %>
+        <%= spaceflight.duration %>
+        <p class="card-text">
+            <%= spaceflight.overview %>
+            <%= spaceflight.destination %>
+            <%= spaceflight.cabin_class %>
+        </p>
+    </div>
+<% end %>
