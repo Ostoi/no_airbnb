@@ -32,6 +32,6 @@ class SpaceflightsController < ApplicationController
   private
 
   def spaceflight_params
-    params.require(:spaceflight).permit(:name, :duration, :overview, :cabin_class, :departure_location, :destination)
+    params.require(:spaceflight).permit(:name, :duration, :overview, :cabin_class, :departure_location, :destination )
   end
 end
