@@ -3,6 +3,10 @@ class SpaceflightsController < ApplicationController
     @spaceflights = Spaceflight.all
   end
 
+  def list
+    @spaceflights = Spaceflight.all
+  end
+
   def new
     @spaceflight = Spaceflight.new
   end

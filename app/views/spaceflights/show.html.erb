@@ -2,10 +2,12 @@
 
 <h1>Pages#show</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
-
+  <div class="card">
     <ul>
+       <li><%= @spaceflight.ship_image %></li>
        <li><%= @spaceflight.name %></li>
        <li><%= @spaceflight.duration %></li>
        <li><%= @spaceflight.overview %></li>
     </ul>
 <%= link_to 'back to Spaceflights', spaceflights_path %>
+  </div>
