@@ -1,7 +1,8 @@
-<div class="container mt-5">
+<div class="container mt-5 text-center">
   <h1>Welcome to No_Airbnb</h1>
-
+<div class="index-grid">
 <% @spaceflights.each do |spaceflight| %>
+<%= link_to spaceflight_path(spaceflight) do %>
   <div class="card" style="width: 18rem;">
     <%# <img class="card-img-top" src="<%=image_path('Serenityship.jpg')%>" alt="Card image cap"> %>
     <div class="card-body">
@@ -12,4 +13,7 @@
     </p>
     </div>
   </div>
+  <% end %>
 <% end %>
+</div>
+</div>
