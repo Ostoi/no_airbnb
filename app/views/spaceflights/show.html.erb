@@ -3,8 +3,8 @@
 <h1>Pages#show</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
   <div class="card">
+    <%= image_tag @spaceflight.ship_image, width: 250 %>
     <ul>
-       <li><%= @spaceflight.ship_image %></li>
        <li><%= @spaceflight.name %></li>
        <li><%= @spaceflight.duration %></li>
        <li><%= @spaceflight.overview %></li>
