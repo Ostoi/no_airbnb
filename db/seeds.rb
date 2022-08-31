@@ -25,7 +25,8 @@ puts "finish"
     overview: Faker::Space.nasa_space_craft,
     cabin_class: Faker::Space.nasa_space_craft,
     departure_location: Faker::Space.nasa_space_craft,
-    destination: Faker::Space.nasa_space_craft
+    destination: Faker::Space.nasa_space_craft,
+    ship_image: ["enterprise.jpeg", "x_wing.jpeg", "starfox.jpeg", "serenity.jpeg", "event_horizon.jpeg"].sample
   )
   spaceflight.save!
 end
