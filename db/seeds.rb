@@ -13,8 +13,8 @@ Spaceflight.destroy_all
 
 user = User.create(email: Faker::Internet.email, password: "123456")
 
-Spaceflight.create(name: "Space X", duration: 80, overview: "Nice view of the Galaxy", user_id: user.id)
-puts "finish"
+# Spaceflight.create(name: "Space X", duration: 80, overview: "Nice view of the Galaxy", user_id: user.id)
+# puts "finish"
 
 10.times do
   user = User.create(email: "#{Faker::Internet.email}", password: "123456")
@@ -26,7 +26,7 @@ puts "finish"
     cabin_class: Faker::Space.nasa_space_craft,
     departure_location: Faker::Space.nasa_space_craft,
     destination: Faker::Space.nasa_space_craft,
-    ship_image: ["enterprise.jpeg", "x_wing.jpeg", "starfox.jpeg", "serenity.jpeg", "event_horizon.jpeg"].sample
+    ship_image: ["enterprise.png", "X-wing.png", "starfox.png", "Serenityship.png", "Event_horizon.png", "millenium_falcon.png"].sample
   )
   spaceflight.save!
 end
