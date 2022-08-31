@@ -2,7 +2,7 @@
   <h1>Welcome to No_Airbnb</h1>
     <ul>
       <% @spaceflights.each do |spaceflight| %>
-        <li><%= spaceflight.name %></li>
+        <li><%= link_to spaceflight.name, spaceflight_path(spaceflight) %></li>
       <% end %>
     </ul>
 </div>
