@@ -2,14 +2,16 @@
   <h1>Welcome to No_Airbnb</h1>
 
 <% @spaceflights.each do |spaceflight| %>
+  <%= link_to spaceflight_path(spaceflight) do %>
   <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="<%=image_path('Serenityship.png')" alt="Card image cap"> %>
+    <%= image_tag spaceflight.ship_image %>
     <div class="card-body">
-      <p class="card-text">
+    <p class="card-text">
       <%= spaceflight.overview %>
-              <%= spaceflight.destination %>
-              <%= spaceflight.cabin_class %>
+      <%= spaceflight.destination %>
+      <%= spaceflight.cabin_class %>
     </p>
     </div>
   </div>
+  <% end %>
 <% end %>
