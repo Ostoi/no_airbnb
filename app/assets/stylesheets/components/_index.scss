@@ -12,3 +12,37 @@ body {
   background-size: cover;
   color: whitesmoke
 }
+
+.footer {
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: rgba(199, 199, 199, 0.7);
+  background-image: url(https://spaceflight.com/wp-content/uploads/2017/06/bg-footer-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 70%;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: whitesmoke;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer .fa-wand-magic-sparkles {
+  color: #D23333;
+}
+.footer .fa-rocket {
+  color: #D23333;
+}
