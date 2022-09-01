@@ -13,7 +13,7 @@ class SpaceflightsController < ApplicationController
 
   def create
     @spaceflight = Spaceflight.new(spaceflight_params)
-    @spaceflight.user = current_user
+      @spaceflight.user = current_user
     if @spaceflight.save
       redirect_to index_path
     else
