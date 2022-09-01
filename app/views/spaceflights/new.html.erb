@@ -1,0 +1,12 @@
+<%= simple_form_for @spaceflight do |f| %>
+  <%= f.input :name %>
+  <%= f.input :duration %>
+  <%= f.input :overview %>
+  <%= f.input :cabin_class %>
+  <%= f.input :destination %>
+  <%# <%= f.input :ship_image %>
+ <%= f.input :ship_image %>
+ <%f.file_field:ship_image, label: 'Image of Ship or Cabin',  accept: 'image/png, image/gif, image/jpg, image/jpg' %>
+
+  <%= f.button :submit %>
+<% end %>
