@@ -26,7 +26,7 @@ user = User.create(email: Faker::Internet.email, password: "123456")
     cabin_class: Faker::Space.nasa_space_craft,
     departure_location: Faker::Space.nasa_space_craft,
     destination: Faker::Space.nasa_space_craft,
-    ship_image: ["enterprise.png", "X-wing.png", "starfox.png", "Serenityship.png", "Event_horizon.png", "millenium_falcon.png"].sample
+    ship_image: ["jenterprise.png", "klingon.png", "Rotarran_BrelBoP.png", "Spaceballs-eagle5.png", "quill.png", "FhlostonInSpace.png", "odysseystation.png", "USS_Voyager.png", "marvin.png", "enterprise.png", "X-wing.png", "starfox.png", "Serenityship.png", "Event_horizon.png", "millenium_falcon.png"].sample
   )
   spaceflight.save!
 end
