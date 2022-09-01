@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: rgb(87, 97, 106);
+  background-color: rgb(8, 47, 81);
   padding: 0;
   z-index: 9999;
   transition: background .3s ease;
@@ -14,4 +14,12 @@
 .navbar-lewagon .navbar-brand img {
   width: 70px;
   border-radius: 5px 5px 5px 5px;
+}
+
+.navbar {
+  background-color: rgb(8, 47, 81) !important;
+}
+
+.nav-link {
+  color: white !important;
 }
