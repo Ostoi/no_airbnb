@@ -1,0 +1,15 @@
+<%= simple_form_for @spaceflight do |f| %>
+  <%= f.input :name %>
+  <%= f.input :duration %>
+  <%= f.input :overview %>
+  <%= f.input :cabin_class %>
+  <%= f.input :destination %>
+  <%# <%= f.input :ship_image %>
+ <%= f.input :ship_image,  label: 'Image of Ship or Cabin',  accept: 'image/png, image/gif, image/jpg, image/jpg', as: :file %>
+ <%= f.button :submit %>
+<% end %>
+
+<%# Cloudinary::Uploader.upload("https://upload.wikimedia.org/wikipedia/commons/a/ae/Olympic_flag.jpg",
+  :public_id => "olympic_flag") %>
+
+<%# https://res.cloudinary.com/demo/image/upload/w_70,h_53,c_scale/turtles.jpg %>
