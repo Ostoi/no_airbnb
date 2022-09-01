@@ -1,13 +1,15 @@
 <div class="container mt-5 text-center">
   <h1>Welcome to No_Airbnb</h1>
+    <p>"Space travel is life-enhancing, and anything that's life-enhancing
+      is worth doing. It makes you want to live forever."</p>
 <div class="index-grid">
 <% @spaceflights.each do |spaceflight| %>
   <%= link_to spaceflight_path(spaceflight) do %>
-  <div class="card" style="width: 18rem;">
+  <div class="card-spaceflight" style="width: 18rem;">
   <% if spaceflight.ship_image %>
     <%= image_tag spaceflight.ship_image %>
   <% end %>
-    <div class="card-body">
+    <div class="card-spaceflight-infos">
     <p class="card-text">
       <%= spaceflight.overview %>
       <%= spaceflight.destination %>
@@ -17,3 +19,4 @@
   </div>
   <% end %>
 <% end %>
+</div>

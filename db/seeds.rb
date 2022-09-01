@@ -11,6 +11,7 @@ require 'faker'
 puts "Cleaning database"
 Spaceflight.destroy_all
 
+
 user = User.create(email: "han@solo.com", password: "Ishotfirst")
 spaceflight = Spaceflight.create!(
   name: "Millenium Falcon",
@@ -25,7 +26,6 @@ file = File.open(asset_path("millenium_falcon.png"))
 spaceflight.ship_image.attach(io: file, filename: "millenium falcon.png", content_type: 'image/jpeg')
 spaceflight.save!
 
-# # "jenterprise.png",
 user = User.create(email: "klingonsrule@startrek.com", password: "654321")
 spaceflight = Spaceflight.create!(
   name: "Gowron",
@@ -125,3 +125,5 @@ spaceflight = Spaceflight.create!(
 file = File.open(asset_path("marvin.png"))
 spaceflight.ship_image.attach(io: file, filename: "marvin.png", content_type: 'image/jpeg')
 spaceflight.save!
+puts "Finished!"
+
