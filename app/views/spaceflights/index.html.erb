@@ -3,11 +3,11 @@
 <div class="index-grid">
 <% @spaceflights.each do |spaceflight| %>
   <%= link_to spaceflight_path(spaceflight) do %>
-  <div class="card" style="width: 18rem;">
+  <div class="card-spaceflight" style="width: 18rem;">
   <% if spaceflight.ship_image %>
     <%= image_tag spaceflight.ship_image %>
   <% end %>
-    <div class="card-body">
+    <div class="card-spaceflight-infos">
     <p class="card-text">
       <%= spaceflight.overview %>
       <%= spaceflight.destination %>
