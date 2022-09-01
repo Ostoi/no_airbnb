@@ -13,7 +13,7 @@ class SpaceflightsController < ApplicationController
 
   def create
     @spaceflight = Spaceflight.new(spaceflight_params)
-    @spaceflight.user = current_user
+      @spaceflight.user = current_user
     if @spaceflight.save
       redirect_to index_path
     else
@@ -32,6 +32,6 @@ class SpaceflightsController < ApplicationController
   private
 
   def spaceflight_params
-    params.require(:spaceflight).permit(:name, :duration, :overview, :cabin_class, :departure_location, :destination )
+    params.require(:spaceflight).permit(:name, :duration, :overview, :cabin_class, :departure_location, :destination, :ship_image)
   end
 end
