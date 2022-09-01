@@ -21,7 +21,7 @@ user = User.create(email: Faker::Internet.email, password: "123456")
   spaceflight = Spaceflight.create!(
     name: Faker::Space.nasa_space_craft,
     user_id: user.id,
-    duration: rand(0..100),
+    duration: Faker::Space.distance_measurement,
     overview: Faker::Space.nasa_space_craft,
     cabin_class: Faker::Space.nasa_space_craft,
     departure_location: Faker::Space.nasa_space_craft,

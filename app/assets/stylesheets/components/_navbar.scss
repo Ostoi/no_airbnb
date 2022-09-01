@@ -17,9 +17,21 @@
 }
 
 .navbar {
-  background-color: rgb(8, 47, 81) !important;
+  background-color: rgba(175, 171, 153, 0.2) !important;
 }
 
 .nav-link {
   color: white !important;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.btn-search {
+  margin-left: -65px;
+  background-color: rgb(8, 47, 81);
+  padding: 5px;
+  border-left: 3px;
+  color: azure;
 }
