@@ -1,27 +1,26 @@
 <div class="container mt-5 text-center">
   <h1>Welcome to No_Airbnb</h1>
-
-<div class="index-grid relative">
-<% @spaceflights.each do |spaceflight| %>
-  <%= link_to spaceflight_path(spaceflight) do %>
-  <div class="card-spaceflight myDIV" style="width: 18rem;">
-    <%= cl_image_tag spaceflight.ship_image.key, width: 250 %>
-    <%# if spaceflight.ship_image %>
-      <%=# image_tag spaceflight.ship_image %>
-     <%# end %>
-    <div class="card-spaceflight-infos card-body">
-    <p class="card-text">
-      <%= spaceflight.overview %>
-      <%= spaceflight.destination %>
-      <%= spaceflight.cabin_class %>
-    </p>
-    </div>
-     <%# <div class="myDIV">Hover over me.</div>
-     <div class="hide flame">I am shown when someone hovers over the div above.</div> %>
-  </div>
-  <div class="hide flame"></div>
-  <% end %>
-<% end %>
+  <div class="index-grid relative">
+    <% @spaceflights.each do |spaceflight| %>
+      <%= link_to spaceflight_path(spaceflight) do %>
+        <div class="card-spaceflight myDIV" style="width: 18rem;">
+          <%= cl_image_tag spaceflight.ship_image.key, width: 250 %>
+          <%# if spaceflight.ship_image %>
+            <%#= image_tag spaceflight.ship_image %>
+          <%# end %>
+          <div class="card-spaceflight-infos card-body">
+            <p class="card-text">
+              <%= spaceflight.overview %>
+              <%= spaceflight.destination %>
+              <%= spaceflight.cabin_class %>
+            </p>
+          </div>
+          <%# <div class="myDIV">Hover over me.</div>
+          <div class="hide flame">I am shown when someone hovers over the div above.</div> %>
+        </div>
+        <div class="hide flame"></div>
+      <% end %>
+    <% end %>
 
 <%#= cl_image_tag(spaceflight.ship_name, width: 400, height: 300, crop: :fill) %>
 <%# <!-- app/views/articles/index.html.erb -->
@@ -39,5 +38,5 @@
 
 </div> %>
 
-</div>
+  </div>
 </div>
