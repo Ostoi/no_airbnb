@@ -78,6 +78,8 @@
 .card-spaceflight:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   opacity: 1;
+  // change above here
+  border-radius: 50% 50% 0% 0%;
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
@@ -117,19 +119,28 @@
 //   100% { transform: translate(1px, -2px) rotate(-1deg); }
 // }
 
+.hide {
+  display: none;
+}
 
-.card-spaceflight:hover {
+.myDIV:hover + .hide {
+  display: block;
+  // color: red;
+}
 
+.flame {
+  z-index: -1;
 	width:150px;
 	height:150px;
 	background:linear-gradient(-45deg, red, orange);
 	border-radius: 150px 150px 0px 150px;
-	transform:rotate(-135deg);
+	transform:rotate(35deg);
 	animation:.1s flame infinite;
 	filter:blur(10px);
-	position:relative;
+	position: relative;
   left: 75px;
-  top: 130px;
+  top: -150px;
+  // change above here
 	box-shadow:17px 20px 90px #700;
 	border:45px solid black;
 	border-left-width:25px;
@@ -157,19 +168,9 @@
 
 @keyframes flame{
   0% {height:150px; width:150px;}
-  50% {height:140px; width:140px;}
-  100% {height:150px; width:150px;}
+//   50% {height:140px; width:140px;}
+//   100% {height:150px; width:150px;}
 }
-
-
-
-
-
-
-
-
-
-
 
 body {
   background-image: url("https://images.unsplash.com/photo-1501862700950-18382cd41497?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=819&q=80");
