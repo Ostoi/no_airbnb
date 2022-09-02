@@ -5,9 +5,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+
+
   resources :spaceflights do
     resources :bookings, only: :create
   end
+  get '/spaceflights/index', to: 'spaceflights#index', as: :index_path
   # get '/spaceflights/:id', to: 'spaceflights#show', as: :spaceflight
   # get '/spaceflights/list', to: 'spaceflight#list'
   # post '/spaceflight/create', to: 'spaceflight#create'

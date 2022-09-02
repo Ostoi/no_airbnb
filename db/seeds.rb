@@ -8,7 +8,9 @@
 require 'faker'
 puts "Cleaning database"
 Spaceflight.destroy_all
+
 User.destroy_all
+
 user = User.create(email: "han@solo.com", password: "Ishotfirst")
 spaceflight = Spaceflight.create!(
   name: "Millenium Falcon",
