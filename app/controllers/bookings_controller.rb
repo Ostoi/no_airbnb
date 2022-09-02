@@ -4,13 +4,11 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new
     @booking.user = current_user
-    if @booking.save
-      redirect_to index_path
-    else
-      render :new
-    end
+    @booking.spaceflight = Spaceflight.find(params[:spaceflight_id])
+    @booking.save
+    redirect_to booking_path(@booking)
   end
 
   def destroy
@@ -20,5 +18,9 @@ class BookingsController < ApplicationController
     else
       render :destroy
     end
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
   end
 end

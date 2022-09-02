@@ -12,7 +12,7 @@
               <li><%= @spaceflight.duration %></li>
               <li><%= @spaceflight.overview %></li>
             </ul>
-            <button type="button" style="text-decoration:none" class="btn btn-warning"><%= link_to 'back to Spaceflights', spaceflights_path %></button>
+            <button type="button" style="text-decoration:none" class="btn btn-warning"><%= link_to 'Book Spaceflight', spaceflight_bookings_path(@spaceflight), data: { "turbo-method": :post } %></button>
           </div>
       </div>
     </div>
