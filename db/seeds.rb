@@ -19,8 +19,8 @@ spaceflight = Spaceflight.create!(
   name: "Millenium Falcon",
   user_id: user.id,
   duration: rand(0..100),
-  overview: "Can do the ___ in 12 parsecs",
-  cabin_class: "It's not the palace, princess.",
+  overview: "It's the ship that made Kessle Run in less than 12 parsecs!",
+  cabin_class: "Ranger",
   departure_location: "Endor",
   destination: "Hoth"
 )
