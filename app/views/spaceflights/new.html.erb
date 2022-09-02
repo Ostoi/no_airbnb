@@ -1,20 +1,25 @@
-<%= simple_form_for @spaceflight do |f| %>
-  <%= f.input :name %>
-  <%= f.input :duration %>
-  <%= f.input :overview %>
-  <%= f.input :cabin_class %>
-  <%= f.input :destination %>
-  <%= f.input :ship_image %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-8 col-lg-6">
+      <%= simple_form_for @spaceflight do |f| %>
+      <%= f.input :name %>
+      <%= f.input :duration %>
+      <%= f.input :overview %>
+      <%= f.input :cabin_class %>
+      <%= f.input :destination %>
+      <%= f.input :ship_image %>
   <%# Cloudinary::Uploader.upload(f.input :ship_image, options = { label: 'Image of Ship or Cabin',  accept: 'image/png, image/gif, image/jpg, image/jpg', as: :file}) %>%
 
  <%#= f.input :ship_image,  label: 'Image of Ship or Cabin',  accept: 'image/png, image/gif, image/jpg, image/jpg', as: :file %>
- <%= f.button :submit %>
-<% end %>
+      <%= f.button :submit %>
+      <% end %>
+   </div>
+  </div>
+</div>
 
 
 <%# Cloudinary::Uploader.upload(f.input :ship_image, options = { label: 'Image of Ship or Cabin',  accept: 'image/png, image/gif, image/jpg, image/jpg', as: :file}) %>%
 
-Cloudinary::Uploader.upload(file, options = {})
 
 
 <%# Cloudinary::Uploader.upload("https://upload.wikimedia.org/wikipedia/commons/a/ae/Olympic_flag.jpg",
