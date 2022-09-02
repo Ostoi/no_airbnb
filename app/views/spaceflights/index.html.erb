@@ -8,9 +8,11 @@
           <%# end %>
           <div class="card-spaceflight-infos card-body">
             <p class="card-text">
-              <%= spaceflight.overview %>
-              <%= spaceflight.destination %>
-              <%= spaceflight.cabin_class %>
+              <span class="selected">Name:</span><%= " #{spaceflight.name}" %><br>
+              <%= " " %><br>
+              <span class="selected">Destination:</span><%= " #{spaceflight.destination}" %> <br>
+              <%= " " %><br>
+              <span class="selected">Price:</span><%= " #{spaceflight.price}.000.000 €" %> <br>
             </p>
           </div>
           <%# <div class="myDIV">Hover over me.</div>
