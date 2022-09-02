@@ -5,14 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
 require 'faker'
-
 puts "Cleaning database"
 Spaceflight.destroy_all
 
 User.destroy_all
-
 
 user = User.create(email: "han@solo.com", password: "Ishotfirst")
 spaceflight = Spaceflight.create!(
@@ -27,7 +24,6 @@ spaceflight = Spaceflight.create!(
 file = File.open("app/assets/images/millenium_falcon.png")
 spaceflight.ship_image.attach(io: file, filename: "millenium falcon.png", content_type: 'image/jpeg')
 spaceflight.save!
-
 user = User.create(email: "klingonsrule@startrek.com", password: "654321")
 spaceflight = Spaceflight.create!(
   name: "Gowron",
@@ -41,7 +37,6 @@ spaceflight = Spaceflight.create!(
 file = File.open("app/assets/images/klingon.png")
 spaceflight.ship_image.attach(io: file, filename: "klingon.png", content_type: 'image/jpeg')
 spaceflight.save!
-
 user = User.create(email: "AdmiralKirk@startrek.com", password: "klingonssuck")
 spaceflight = Spaceflight.create!(
   name: "Admiral James T. Kirk",
@@ -55,7 +50,6 @@ spaceflight = Spaceflight.create!(
 file = File.open("app/assets/images/enterprise.png")
 spaceflight.ship_image.attach(io: file, filename: "enterprise.png", content_type: 'image/jpeg')
 spaceflight.save!
-
  user = User.create(email: "Lonestar@spaceballs.com", password: "YOGURT")
  spaceflight = Spaceflight.create!(
    name: "Lonestar",
@@ -69,7 +63,6 @@ spaceflight.save!
  file = File.open("app/assets/images/Spaceballs-eagle5.png")
  spaceflight.ship_image.attach(io: file, filename: "spaceballs.png", content_type: 'image/jpeg')
  spaceflight.save!
-
 user = User.create(email: "StarLord@guardians.com", password: "Ronansucks")
 spaceflight = Spaceflight.create!(
   name: "Peter Quill",
@@ -83,7 +76,6 @@ spaceflight = Spaceflight.create!(
 file = File.open("app/assets/images/quill.png")
 spaceflight.ship_image.attach(io: file, filename: "quill.png", content_type: 'image/jpeg')
 spaceflight.save!
-
 user = User.create(email: "akbar@rebellion.com", password: "darthwho?")
 spaceflight = Spaceflight.create!(
   name: "Admiral Akbar",
@@ -97,8 +89,6 @@ spaceflight = Spaceflight.create!(
 file = File.open("app/assets/images/X-wing.png")
 spaceflight.ship_image.attach(io: file, filename: "X-wing.png", content_type: 'image/jpeg')
 spaceflight.save!
-
-
 # "Rotarran_BrelBoP.png", "FhlostonInSpace.png", "odysseystation.png", "USS_Voyager.png",  "starfox.png", "Serenityship.png", "Event_horizon.png",
 user = User.create(email: "adent@hitchikers.com", password: "Dontpanic")
 spaceflight = Spaceflight.create!(
@@ -113,7 +103,6 @@ spaceflight = Spaceflight.create!(
 file = File.open("app/assets/images/Heartofgold.png")
 spaceflight.ship_image.attach(io: file, filename: "Heartofgold.png", content_type: 'image/jpeg')
 spaceflight.save!
-
 user = User.create(email: "marvin@mars.com", password: "ihatebugs")
 spaceflight = Spaceflight.create!(
   name: "Marvin the Martian",

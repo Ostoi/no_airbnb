@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "spaceflights#index"
+  root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   end
   get '/spaceflights/index', to: 'spaceflights#index', as: :index_path
   # get '/spaceflights/:id', to: 'spaceflights#show', as: :spaceflight
-  # get '/spaceflights/new', to: 'spaceflight#new'
+  # get '/spaceflights/list', to: 'spaceflight#list'
   # post '/spaceflight/create', to: 'spaceflight#create'
 end
