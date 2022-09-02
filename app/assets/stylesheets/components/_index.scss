@@ -11,19 +11,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
+  margin: 30px auto;
+  width: 90%;
 }
-
-// @media(max-width: 992px) {
-//   .cards {
-//     grid-template-columns: 1fr 1fr;
-//   }
-// }
-
-// @media(max-width: 768px) {
-//   .cards {
-//     grid-template-columns: 1fr;
-//   }
-// }
 
 .index-grid a{
   text-decoration: none;
@@ -86,13 +76,6 @@
   animation: shake 7s;
   animation-iteration-count: infinite;
 }
-
-// .card-spaceflight:active {
-//   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-//   opacity: 1;
-//   animation: shake 2s;
-//   animation-iteration-count: infinite;
-// }
 
 @keyframes shake {
   0% { transform: translate(1px, 0px) rotate(0deg); }
@@ -301,4 +284,17 @@ body {
 }
 .footer .fa-rocket {
   color: #D23333;
+}
+
+.banner {
+  background-image: url(https://pbs.twimg.com/media/EEI2y0eXoAIJEoK?format=jpg&name=900x900);
+  background-size: cover;
+  background-position: center;
+}
+
+.size {
+  height: 380px;
+  width: 750px;
+  justify-content: center;
+  margin: 0 auto;
 }
