@@ -4,17 +4,16 @@
 <p>"Space travel is life-enhancing, and anything that's life-enhancing is worth doing. It makes you want to live forever."</p>
   <div class="card">
   <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-sm-12 col-md-8 col-lg-6">
-    <%= image_tag @spaceflight.ship_image, width: 250 %>
-    <ul>
-       <li><%= @spaceflight.name %></li>
-       <li><%= @spaceflight.duration %></li>
-       <li><%= @spaceflight.overview %></li>
-    </ul>
-    <button type="button" style="text-decoration:none" class="btn btn-warning"><%= link_to 'back to Spaceflights', spaceflights_path %></button>
-
-  </div>
-  </div>
- </div>
- </div>
+        <div class="row justify-content-center">
+          <div class="col-sm-12 col-md-8 col-lg-6">
+            <%= image_tag @spaceflight.ship_image, width: 250 %>
+            <ul>
+              <li><%= @spaceflight.name %></li>
+              <li><%= @spaceflight.duration %></li>
+              <li><%= @spaceflight.overview %></li>
+            </ul>
+            <button type="button" style="text-decoration:none" class="btn btn-warning"><%= link_to 'back to Spaceflights', spaceflights_path %></button>
+          </div>
+      </div>
+    </div>
+</div>
