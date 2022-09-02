@@ -7,12 +7,16 @@
         <div class="row justify-content-center">
           <div class="col-sm-12 col-md-8 col-lg-6">
             <%= image_tag @spaceflight.ship_image, width: 250 %>
-            <ul>
-              <li><%= @spaceflight.name %></li>
-              <li><%= @spaceflight.duration %></li>
-              <li><%= @spaceflight.overview %></li>
-            </ul>
-            <button type="button" style="text-decoration:none" class="btn btn-warning"><%= link_to 'Book Spaceflight', spaceflight_bookings_path(@spaceflight), data: { "turbo-method": :post } %></button>
+            <p class="card-text">
+              <span class="selected">Name:</span><%= " #{@spaceflight.name}" %><br>
+              <span class="selected">Overview:</span><%= " #{@spaceflight.overview}" %><br>
+              <span class="selected">Duration:</span><%= " #{@spaceflight.duration} days" %><br>
+              <span class="selected">Departure:</span><%= " #{@spaceflight.departure_location}" %> <br>
+              <span class="selected">Destination:</span><%= " #{@spaceflight.destination}" %> <br>
+              <span class="selected">Cabin class:</span><%= " #{@spaceflight.cabin_class}" %> <br>
+              <span class="selected">Price:</span><%= " #{@spaceflight.price}.000.000 €" %> <br>
+            </p>
+            <button type="button" style="text-decoration:none" class="btn btn-warning"><%= link_to 'back to Spaceflights', spaceflights_path %></button>
           </div>
       </div>
     </div>

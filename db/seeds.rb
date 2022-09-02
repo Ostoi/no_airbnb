@@ -19,10 +19,11 @@ spaceflight = Spaceflight.create!(
   name: "Millenium Falcon",
   user_id: user.id,
   duration: rand(0..100),
-  overview: "Can do the ___ in 12 parsecs",
-  cabin_class: "It's not the palace, princess.",
+  overview: "It's the ship that made Kessle Run in less than 12 parsecs!",
+  cabin_class: "Ranger",
   departure_location: "Endor",
-  destination: "Hoth"
+  destination: "Hoth",
+  price: rand(1...20)
 )
 file = File.open("app/assets/images/millenium_falcon.png")
 spaceflight.ship_image.attach(io: file, filename: "millenium falcon.png", content_type: 'image/jpeg')
@@ -36,7 +37,8 @@ spaceflight = Spaceflight.create!(
   overview: "If you were a true Klingon, I would kill you where you stand.",
   cabin_class: "Klingon-y",
   departure_location: "Q'onoS",
-  destination: "Genesis"
+  destination: "Genesis",
+  price: rand(1...20)
 )
 file = File.open("app/assets/images/klingon.png")
 spaceflight.ship_image.attach(io: file, filename: "klingon.png", content_type: 'image/jpeg')
@@ -50,7 +52,8 @@ spaceflight = Spaceflight.create!(
   overview: "Captain's log, stardate 9529.1. This is the final cruise of the starship Enterprise under my command.",
   cabin_class: "Captain",
   departure_location: "Earth",
-  destination: "Genesis"
+  destination: "Genesis",
+  price: rand(1...20)
 )
 file = File.open("app/assets/images/enterprise.png")
 spaceflight.ship_image.attach(io: file, filename: "enterprise.png", content_type: 'image/jpeg')
@@ -64,7 +67,8 @@ spaceflight.save!
    overview: "Ludicrous speed",
    cabin_class: "Captain",
    departure_location: "Druidia",
-   destination: "The Moon of Vega"
+   destination: "The Moon of Vega",
+   price: rand(1...20)
  )
  file = File.open("app/assets/images/Spaceballs-eagle5.png")
  spaceflight.ship_image.attach(io: file, filename: "spaceballs.png", content_type: 'image/jpeg')
@@ -78,7 +82,8 @@ spaceflight = Spaceflight.create!(
   overview: "We are groot",
   cabin_class: "Captain",
   departure_location: "Earth",
-  destination: "Ego"
+  destination: "Ego",
+  price: rand(1...20)
 )
 file = File.open("app/assets/images/quill.png")
 spaceflight.ship_image.attach(io: file, filename: "quill.png", content_type: 'image/jpeg')
@@ -92,7 +97,8 @@ spaceflight = Spaceflight.create!(
   overview: "It's a trap!",
   cabin_class: "Admiral",
   departure_location: "Hoth",
-  destination: "Death Star"
+  destination: "Death Star",
+  price: rand(1...20)
 )
 file = File.open("app/assets/images/X-wing.png")
 spaceflight.ship_image.attach(io: file, filename: "X-wing.png", content_type: 'image/jpeg')
@@ -108,7 +114,8 @@ spaceflight = Spaceflight.create!(
   overview: "Have towel will travel",
   cabin_class: "HeartofGold",
   departure_location: "Earth",
-  destination: "Vogsphere"
+  destination: "Vogsphere",
+  price: rand(1...20)
 )
 file = File.open("app/assets/images/Heartofgold.png")
 spaceflight.ship_image.attach(io: file, filename: "Heartofgold.png", content_type: 'image/jpeg')
@@ -122,7 +129,8 @@ spaceflight = Spaceflight.create!(
   overview: "Oh, drat these computers. They are so naughty and so complex. I could pinch them.",
   cabin_class: "Martian",
   departure_location: "Earth",
-  destination: "Mars"
+  destination: "Mars",
+  price: rand(1...20)
 )
 file = File.open("app/assets/images/marvin.png")
 spaceflight.ship_image.attach(io: file, filename: "marvin.png", content_type: 'image/jpeg')
