@@ -1,15 +1,18 @@
-
+<div class="index-grid">
 <% @spaceflights.each do |spaceflight| %>
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="<%=spaceflight.ship_image%>" alt="Card image cap">
-
-    <img class="card-img-top" src="<%=image_path('serenity.png')%>" alt="Card image cap">
-    <div class="card-body">
-      <p class="card-text">
-              <%= spaceflight.overview %>
-              <%= spaceflight.destination %>
-              <%= spaceflight.cabin_class %>
+  <%= link_to spaceflight_path(spaceflight) do %>
+  <div class="card-spaceflight" style="width: 18rem;">
+  <% if spaceflight.ship_image %>
+    <%= image_tag spaceflight.ship_image %>
+  <% end %>
+    <div class="card-spaceflight-infos">
+    <p class="card-text">
+      <%= spaceflight.overview %>
+      <%= spaceflight.destination %>
+      <%= spaceflight.cabin_class %>
     </p>
     </div>
   </div>
+  <% end %>
 <% end %>
+</div>
