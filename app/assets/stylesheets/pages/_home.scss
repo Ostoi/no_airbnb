@@ -1,1 +1,19 @@
 // Specific CSS for your home-page
+.banner-content {
+  position: relative;
+  top: 263px;
+}
+
+.launch-button {
+  position: relative;
+  top: 43px;
+  font-size: large;
+  --bs-btn-font-size: 2.0rem;
+  background-color: #00000000;
+}
+
+h2 {
+  font-size: calc(1.0rem + 0.9vw);
+  color: rgb(47, 112, 153);
+  font-weight: bold;
+}
