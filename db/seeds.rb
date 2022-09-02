@@ -11,6 +11,8 @@ require 'faker'
 puts "Cleaning database"
 Spaceflight.destroy_all
 
+User.destroy_all
+
 
 user = User.create(email: "han@solo.com", password: "Ishotfirst")
 spaceflight = Spaceflight.create!(
@@ -22,7 +24,7 @@ spaceflight = Spaceflight.create!(
   departure_location: "Endor",
   destination: "Hoth"
 )
-file = File.open(asset_path("millenium_falcon.png"))
+file = File.open("app/assets/images/millenium_falcon.png")
 spaceflight.ship_image.attach(io: file, filename: "millenium falcon.png", content_type: 'image/jpeg')
 spaceflight.save!
 
@@ -36,7 +38,7 @@ spaceflight = Spaceflight.create!(
   departure_location: "Q'onoS",
   destination: "Genesis"
 )
-file = File.open(asset_path("klingon.png"))
+file = File.open("app/assets/images/klingon.png")
 spaceflight.ship_image.attach(io: file, filename: "klingon.png", content_type: 'image/jpeg')
 spaceflight.save!
 
@@ -50,7 +52,7 @@ spaceflight = Spaceflight.create!(
   departure_location: "Earth",
   destination: "Genesis"
 )
-file = File.open(asset_path("enterprise.png"))
+file = File.open("app/assets/images/enterprise.png")
 spaceflight.ship_image.attach(io: file, filename: "enterprise.png", content_type: 'image/jpeg')
 spaceflight.save!
 
@@ -64,7 +66,7 @@ spaceflight.save!
    departure_location: "Druidia",
    destination: "The Moon of Vega"
  )
- file = File.open(asset_path("Spaceballs-eagle5.png"))
+ file = File.open("app/assets/images/Spaceballs-eagle5.png")
  spaceflight.ship_image.attach(io: file, filename: "spaceballs.png", content_type: 'image/jpeg')
  spaceflight.save!
 
@@ -73,12 +75,12 @@ spaceflight = Spaceflight.create!(
   name: "Peter Quill",
   user_id: user.id,
   duration: rand(0..100),
-  overview: "We are groot"
+  overview: "We are groot",
   cabin_class: "Captain",
   departure_location: "Earth",
   destination: "Ego"
 )
-file = File.open(asset_path("quill.png"))
+file = File.open("app/assets/images/quill.png")
 spaceflight.ship_image.attach(io: file, filename: "quill.png", content_type: 'image/jpeg')
 spaceflight.save!
 
@@ -87,12 +89,12 @@ spaceflight = Spaceflight.create!(
   name: "Admiral Akbar",
   user_id: user.id,
   duration: rand(0..100),
-  overview: "It's a trap!"
+  overview: "It's a trap!",
   cabin_class: "Admiral",
   departure_location: "Hoth",
   destination: "Death Star"
 )
-file = File.open(asset_path("X-wing.png"))
+file = File.open("app/assets/images/X-wing.png")
 spaceflight.ship_image.attach(io: file, filename: "X-wing.png", content_type: 'image/jpeg')
 spaceflight.save!
 
@@ -103,12 +105,12 @@ spaceflight = Spaceflight.create!(
   name: "Arthur Dent",
   user_id: user.id,
   duration: rand(0..100),
-  overview: "Have towel will travel"
+  overview: "Have towel will travel",
   cabin_class: "HeartofGold",
   departure_location: "Earth",
   destination: "Vogsphere"
 )
-file = File.open(asset_path("Heartofgold.png"))
+file = File.open("app/assets/images/Heartofgold.png")
 spaceflight.ship_image.attach(io: file, filename: "Heartofgold.png", content_type: 'image/jpeg')
 spaceflight.save!
 
@@ -117,13 +119,12 @@ spaceflight = Spaceflight.create!(
   name: "Marvin the Martian",
   user_id: user.id,
   duration: rand(0..100),
-  overview: "Oh, drat these computers. They are so naughty and so complex. I could pinch them."
+  overview: "Oh, drat these computers. They are so naughty and so complex. I could pinch them.",
   cabin_class: "Martian",
   departure_location: "Earth",
   destination: "Mars"
 )
-file = File.open(asset_path("marvin.png"))
+file = File.open("app/assets/images/marvin.png")
 spaceflight.ship_image.attach(io: file, filename: "marvin.png", content_type: 'image/jpeg')
 spaceflight.save!
 puts "Finished!"
-
