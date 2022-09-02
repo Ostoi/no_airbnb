@@ -15,7 +15,8 @@ class SpaceflightsController < ApplicationController
     @spaceflight = Spaceflight.new(spaceflight_params)
       @spaceflight.user = current_user
     if @spaceflight.save
-      redirect_to index_path
+      # redirect_to index_path_url
+      redirect_to :controller => 'spaceflights', :action => 'index'
     else
       render :new
     end
