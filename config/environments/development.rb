@@ -34,7 +34,9 @@ Rails.application.configure do
   end
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :local
+  # config.active_storage.service = :local
+  config.active_storage.service = :cloudinary
+
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
@@ -67,4 +69,13 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+
+
+
+  # .env
+# CLOUDINARY_URL=cloudinary://544611764659896:URFs-pMKXBAbNWGkr4Y8thV22yQ
+
+# # .env
+# CLOUDINARY_URL=cloudinary://298522699261255:Qa1ZfO4syfbOC-***********************8
 end
